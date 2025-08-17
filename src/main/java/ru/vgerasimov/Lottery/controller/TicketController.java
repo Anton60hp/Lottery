@@ -6,7 +6,6 @@ import ru.vgerasimov.Lottery.dto.TicketDTO;
 import ru.vgerasimov.Lottery.dto.TicketRequest;
 import ru.vgerasimov.Lottery.service.TicketService;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/tickets")
@@ -22,8 +21,4 @@ public class TicketController {
         return ticketService.createTicket(request);
     }
 
-    @GetMapping("/draw/{drawId}")
-    public List<TicketDTO> getTicketsForDraw(@PathVariable Long drawId) {
-        return ticketService.getTicketsForDraw(drawId);
-    }
 }
